@@ -1,4 +1,4 @@
-import random, threading
+import random, threading, time
 
 def thread():
   bin = ''
@@ -15,10 +15,9 @@ def randomize():
 
   for threadling in threadlings:
     threadling.start()
-
-  for threadling in threadlings:
-    threadling.join()
-
+  
+  time.sleep(3)
+  
   del threadlings # Sad :(
   
   for i in range(5000*8):
